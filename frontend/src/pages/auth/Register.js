@@ -168,7 +168,7 @@ const Register = () => {
             
             <div className="form-group">
               <label htmlFor="name">
-                Full Name <span className="required">*</span>
+                Full Name <span className="required " >*</span>
               </label>
               <input
                 type="text"

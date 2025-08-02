@@ -20,6 +20,7 @@ import Profile from './pages/profile/Profile';
 import Dashboard from './pages/Dashboard';
 import Chats from './pages/chat/Chats';
 import ChatRoom from './pages/chat/ChatRoom';
+import PostItem from './components/posts/PostItem';
 
 // Styles
 import './App.css';
@@ -69,7 +70,7 @@ function App() {
                 path="/create-post"
                 element={
                   <PrivateRoute>
-                    <CreatePost />
+                    <PostItem />
                   </PrivateRoute>
                 }
               />

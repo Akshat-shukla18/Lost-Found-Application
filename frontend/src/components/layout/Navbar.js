@@ -48,12 +48,7 @@ const Navbar = () => {
             <Link to="/" className="nav-link" onClick={closeMenu}>
               Home
             </Link>
-            <Link to="/posts?type=lost" className="nav-link" onClick={closeMenu}>
-              Lost Items
-            </Link>
-            <Link to="/posts?type=found" className="nav-link" onClick={closeMenu}>
-              Found Items
-            </Link>
+           
           </div>
 
           {/* Authentication Links */}

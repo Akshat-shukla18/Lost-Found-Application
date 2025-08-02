@@ -218,14 +218,14 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: AUTH_ACTIONS.CLEAR_ERRORS });
   };
 
-  // Load user on mount
+  // Load user when token changes and user not loaded yet
   useEffect(() => {
-    if (state.token) {
+    if (state.token && !state.user && state.loading) {
       loadUser();
-    } else {
+    } else if (!state.token) {
       dispatch({ type: AUTH_ACTIONS.SET_LOADING, payload: false });
     }
-  }, []);
+  }, [state.token, state.user, state.loading]);
 
   // Set auth token when token changes
   useEffect(() => {
