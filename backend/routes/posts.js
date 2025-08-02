@@ -14,15 +14,16 @@ router.get('/', [
   optionalAuth,
   query('type')
     .optional()
-    .isIn(['lost', 'found'])
+    .custom(value => ['lost', 'found'].includes(value))
     .withMessage('Type must be either lost or found'),
   query('category')
     .optional()
-    .isIn(['Electronics', 'Documents', 'Accessories', 'Books', 'Clothing', 'Bags', 'Keys', 'Jewelry', 'Sports Equipment', 'Other'])
+    .custom(value => ['Electronics', 'Documents', 'Accessories', 'Books', 'Clothing', 'Bags', 'Keys', 'Jewelry', 'Sports Equipment', 'Other'].includes(value))
     .withMessage('Invalid category'),
   query('building')
     .optional()
     .trim()
+    .isString()
     .withMessage('Building must be a string'),
   query('search')
     .optional()
@@ -39,11 +40,11 @@ router.get('/', [
     .withMessage('Limit must be between 1 and 50'),
   query('sortBy')
     .optional()
-    .isIn(['createdAt', 'dateTime', 'priority', 'views'])
+    .custom(value => ['createdAt', 'dateTime', 'priority', 'views'].includes(value))
     .withMessage('Invalid sort field'),
   query('sortOrder')
     .optional()
-    .isIn(['asc', 'desc'])
+    .custom(value => ['asc', 'desc'].includes(value))
     .withMessage('Sort order must be asc or desc')
 ], async (req, res) => {
   try {
