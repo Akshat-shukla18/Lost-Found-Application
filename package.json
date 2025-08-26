@@ -1,0 +1,14 @@
+{
+  "name": "rtrwh-assessment",
+  "private": true,
+  "version": "0.1.0",
+  "description": "On-Spot Assessment of Roof Top Rainwater Harvesting (RTRWH) and Artificial Recharge Potential - MERN",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
