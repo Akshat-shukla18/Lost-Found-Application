@@ -45,7 +45,7 @@ lost-found-platform/
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB (local or MongoDB Atlas)
-- npm or yarn package manager
+  -npm yarn 
 
 ### Installation
 
@@ -72,6 +72,4 @@ lost-found-platform/
 - Corporate offices
 - Libraries and public spaces
 - Events and festivals
-- Community centers
-
-This platform encourages peer interaction, trust, and responsibility in shared spaces while providing a modern solution to item recovery.
+- Community centers.
