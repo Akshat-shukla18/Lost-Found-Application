@@ -24,7 +24,7 @@ A fully-featured, community-driven web application built using the **MERN stack 
 ```
 lost-found-platform/
 ├── backend/                 # Node.js + Express backend
-│   ├── models/             # MongoDB models
+│   ├── models/             # MongoDB model
 │   ├── routes/             # API routes
 │   ├── middleware/         # Authentication & validation
 │   ├── config/             # Database & environment config
@@ -41,14 +41,12 @@ lost-found-platform/
 ```
 
 ## Getting Started
-
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB (local or MongoDB Atlas)
   -npm yarn 
 
 ### Installation
-
 1. Clone the repository
 2. Install backend dependencies: `cd backend && npm install`
 3. Install frontend dependencies: `cd frontend && npm install`
